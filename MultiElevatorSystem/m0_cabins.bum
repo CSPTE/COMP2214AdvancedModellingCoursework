@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xmachine.base" org.eventb.core.generated="false" version="5">
+    <org.eventb.core.seesContext name="_0tHV0KwkEeyeV6WMpfdowA" org.eventb.core.target="c0_cabins"/>
+    <org.eventb.core.variable name="_0tHV0awkEeyeV6WMpfdowA" org.eventb.core.generated="false" org.eventb.core.identifier="cabins"/>
+    <org.eventb.core.invariant name="_0tHV0qwkEeyeV6WMpfdowA" org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="cabins ⊆ CABINS"/>
+    <org.eventb.core.event name="_0tHV06wkEeyeV6WMpfdowA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="_0tH84KwkEeyeV6WMpfdowA" org.eventb.core.assignment="cabins ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_0tH84awkEeyeV6WMpfdowA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="AddCabin">
+        <org.eventb.core.parameter name="_0tH84qwkEeyeV6WMpfdowA" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="_0tH846wkEeyeV6WMpfdowA" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ CABINS"/>
+        <org.eventb.core.guard name="_0tIj8KwkEeyeV6WMpfdowA" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="c ∉ cabins"/>
+        <org.eventb.core.action name="_0tIj8awkEeyeV6WMpfdowA" org.eventb.core.assignment="cabins ≔ cabins ∪ {c}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,0 +1,22 @@
+machine m0_cabins
+sees c0_cabins
+variables cabins
+
+invariants
+@inv1: cabins ⊆ CABINS
+
+events
+event INITIALISATION
+begin
+@act1: cabins ≔ ∅
+end
+
+event AddCabin
+any c where
+@grd1: c ∈ CABINS
+@grd2: c ∉ cabins
+then
+@act1: cabins ≔ cabins ∪ {c}
+end
+
+end

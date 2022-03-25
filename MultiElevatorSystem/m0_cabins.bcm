@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xmachine.base">
+    <org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/MultiElevatorSystem/c0_cabins.bcc" org.eventb.core.source="/MultiElevatorSystem/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.seesContext#_0tHV0KwkEeyeV6WMpfdowA"/>
+    <org.eventb.core.scInternalContext name="c0_cabins">
+        <org.eventb.core.scCarrierSet name="CABINS" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.carrierSet#_zXYR8KwkEeyeV6WMpfdowA" org.eventb.core.type="ℙ(CABINS)"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scInvariant name="c0_cabint" org.eventb.core.label="inv1" org.eventb.core.predicate="cabins⊆CABINS" org.eventb.core.source="/MultiElevatorSystem/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.invariant#_0tHV0qwkEeyeV6WMpfdowA" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scVariable name="cabins" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/MultiElevatorSystem/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.variable#_0tHV0awkEeyeV6WMpfdowA" org.eventb.core.type="ℙ(CABINS)"/>
+    <org.eventb.core.scEvent name="c0_cabinu" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/MultiElevatorSystem/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_0tHV06wkEeyeV6WMpfdowA">
+        <org.eventb.core.scAction name="'" org.eventb.core.assignment="cabins ≔ ∅ ⦂ ℙ(CABINS)" org.eventb.core.label="act1" org.eventb.core.source="/MultiElevatorSystem/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_0tHV06wkEeyeV6WMpfdowA|org.eventb.core.action#_0tH84KwkEeyeV6WMpfdowA"/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="c0_cabinv" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddCabin" org.eventb.core.source="/MultiElevatorSystem/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_0tH84awkEeyeV6WMpfdowA">
+        <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="c∈CABINS" org.eventb.core.source="/MultiElevatorSystem/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_0tH84awkEeyeV6WMpfdowA|org.eventb.core.guard#_0tH846wkEeyeV6WMpfdowA" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="c∉cabins" org.eventb.core.source="/MultiElevatorSystem/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_0tH84awkEeyeV6WMpfdowA|org.eventb.core.guard#_0tIj8KwkEeyeV6WMpfdowA" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scParameter name="c" org.eventb.core.source="/MultiElevatorSystem/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_0tH84awkEeyeV6WMpfdowA|org.eventb.core.parameter#_0tH84qwkEeyeV6WMpfdowA" org.eventb.core.type="CABINS"/>
+        <org.eventb.core.scAction name="d" org.eventb.core.assignment="cabins ≔ cabins∪{c}" org.eventb.core.label="act1" org.eventb.core.source="/MultiElevatorSystem/m0_cabins.bum|org.eventb.core.machineFile#m0_cabins|org.eventb.core.event#_0tH84awkEeyeV6WMpfdowA|org.eventb.core.action#_0tIj8awkEeyeV6WMpfdowA"/>
+    </org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>
