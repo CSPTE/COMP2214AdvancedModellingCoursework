@@ -63,26 +63,35 @@
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                     <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
-                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
                     </org.eventb.core.prAnte>
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
         </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬1∈ran(cabinFloor)">
+            <org.eventb.core.prIdent name="CABINS" org.eventb.core.type="ℙ(CABINS)"/>
+            <org.eventb.core.prIdent name="cabinFloor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="c∉cabins">
             <org.eventb.core.prIdent name="CABINS" org.eventb.core.type="ℙ(CABINS)"/>
             <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
             <org.eventb.core.prIdent name="cabins" org.eventb.core.type="ℙ(CABINS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="cabins⊆CABINS">
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="cabins⊆CABINS">
             <org.eventb.core.prIdent name="CABINS" org.eventb.core.type="ℙ(CABINS)"/>
             <org.eventb.core.prIdent name="cabins" org.eventb.core.type="ℙ(CABINS)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="c∈CABINS">
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="c∈CABINS">
             <org.eventb.core.prIdent name="CABINS" org.eventb.core.type="ℙ(CABINS)"/>
             <org.eventb.core.prIdent name="c" org.eventb.core.type="CABINS"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="1∉ran(cabinFloor)">
+            <org.eventb.core.prIdent name="CABINS" org.eventb.core.type="ℙ(CABINS)"/>
+            <org.eventb.core.prIdent name="cabinFloor" org.eventb.core.type="ℙ(CABINS×ℤ)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬c∈cabins">
             <org.eventb.core.prIdent name="CABINS" org.eventb.core.type="ℙ(CABINS)"/>
