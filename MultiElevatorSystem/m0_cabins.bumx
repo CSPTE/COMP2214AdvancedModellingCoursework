@@ -1,14 +1,16 @@
 machine m0_cabins
 sees c0_cabins
-variables cabins
+variables cabins cabinFloor
 
 invariants
 @inv1: cabins ⊆ CABINS
+@inv2: cabinFloor ∈ cabins ↣ floor
 
 events
 event INITIALISATION
 begin
 @act1: cabins ≔ ∅
+@act2: cabinFloor ≔ ∅
 end
 
 event AddCabin
