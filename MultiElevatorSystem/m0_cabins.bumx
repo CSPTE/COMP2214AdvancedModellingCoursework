@@ -17,7 +17,7 @@ event AddCabin
 any c where
 @grd1: c ∈ CABINS
 @grd2: c ∉ cabins
-@grd3: cabinFloor(cab) ≠ 1 · ∀ cab ∈ cabins
+@grd3: ∀ cab · cab ∈ cabins ∧ cabinFloor(cab) ≠ 1
 then
 @act1: cabins ≔ cabins ∪ {c}
 @act2: cabinFloor(c) ≔ 1
