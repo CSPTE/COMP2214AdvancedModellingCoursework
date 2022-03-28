@@ -4,7 +4,7 @@ variables cabins cabinFloor cabinGoingToUp cabinGoingToDown
 
 invariants
 @inv1: cabins ⊆ CABINS
-@inv2: cabinFloor ∈ cabins ↣ floor
+@inv2: cabinFloor ∈ cabins ⤔ floor
 @inv3: cabinGoingToUp ∈ cabins ⤔ floor
 @inv4: cabinGoingToDown ∈ cabins ⤔ floor
 
@@ -49,6 +49,7 @@ any c where
 @grd6: c ∉ dom(cabinGoingToDown)
 then
 @act1: cabinGoingToUp(c) ≔ cabinFloor(c) + 1
+@act2: cabinFloor ≔ {c} ⩤ cabinFloor
 end
 
 event CabinReachesFloorGoingUp
@@ -70,6 +71,7 @@ any c where
 @grd6: c ∉ dom(cabinGoingToUp)
 then
 @act1: cabinGoingToDown(c) ≔ cabinFloor(c) − 1
+@act2: cabinFloor ≔ {c} ⩤ cabinFloor
 end
 
 event CabinReachesFloorGoingDown
