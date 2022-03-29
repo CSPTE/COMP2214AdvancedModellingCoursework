@@ -7,6 +7,7 @@ invariants
 @inv2: cabinFloor ∈ cabins ⤔ floor
 @inv3: cabinGoingToUp ∈ cabins ⤔ floor
 @inv4: cabinGoingToDown ∈ cabins ⤔ floor
+@inv5: ∀ c · c ∈ cabins ⇒ c ∈ dom(cabinFloor) ∨ c ∈ dom(cabinGoingToUp) ∨ c ∈ dom(cabinGoingToDown)
 
 events
 event INITIALISATION
@@ -31,7 +32,8 @@ end
 event RemoveCabin
 any c where
 @grd1: c ∈ cabins
-@grd2: cabinFloor(c) = topFloor
+@grd2: c ∈ dom(cabinFloor)
+@grd3: cabinFloor(c) = topFloor
 then
 @act1: cabins ≔ cabins ∖ {c}
 @act2: cabinFloor ≔ {c} ⩤ cabinFloor

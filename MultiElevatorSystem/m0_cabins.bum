@@ -1,72 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xmachine.base" org.eventb.core.generated="false" version="5">
-    <org.eventb.core.seesContext name="_NyIUoK6lEeyyTqIqcafSag" org.eventb.core.target="c0_cabins"/>
-    <org.eventb.core.variable name="_NyIUoa6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.identifier="cabins"/>
-    <org.eventb.core.variable name="_NyIUoq6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.identifier="cabinFloor"/>
-    <org.eventb.core.variable name="_NyIUo66lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.identifier="cabinGoingToUp"/>
-    <org.eventb.core.variable name="_NyI7sK6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.identifier="cabinGoingToDown"/>
-    <org.eventb.core.invariant name="_NyI7sa6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="cabins ⊆ CABINS"/>
-    <org.eventb.core.invariant name="_NyI7sq6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="inv2" org.eventb.core.predicate="cabinFloor ∈ cabins ⤔ floor"/>
-    <org.eventb.core.invariant name="_NyI7s66lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="inv3" org.eventb.core.predicate="cabinGoingToUp ∈ cabins ⤔ floor"/>
-    <org.eventb.core.invariant name="_NyJiwK6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="inv4" org.eventb.core.predicate="cabinGoingToDown ∈ cabins ⤔ floor"/>
-    <org.eventb.core.event name="_NyJiwa6lEeyyTqIqcafSag" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
-        <org.eventb.core.action name="_NyJiwq6lEeyyTqIqcafSag" org.eventb.core.assignment="cabins ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="_NyJiw66lEeyyTqIqcafSag" org.eventb.core.assignment="cabinFloor ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="_NyKJ0K6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinGoingToUp ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="_NyKJ0a6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinGoingToDown ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act4"/>
+    <org.eventb.core.seesContext name="_ipDEcK86Eey_3erQTu7NnQ" org.eventb.core.target="c0_cabins"/>
+    <org.eventb.core.variable name="_ipDrgK86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.identifier="cabins"/>
+    <org.eventb.core.variable name="_ipDrga86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.identifier="cabinFloor"/>
+    <org.eventb.core.variable name="_ipDrgq86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.identifier="cabinGoingToUp"/>
+    <org.eventb.core.variable name="_ipDrg686Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.identifier="cabinGoingToDown"/>
+    <org.eventb.core.invariant name="_ipESkK86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="cabins ⊆ CABINS"/>
+    <org.eventb.core.invariant name="_ipESka86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="inv2" org.eventb.core.predicate="cabinFloor ∈ cabins ⤔ floor"/>
+    <org.eventb.core.invariant name="_ipE5oK86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="inv3" org.eventb.core.predicate="cabinGoingToUp ∈ cabins ⤔ floor"/>
+    <org.eventb.core.invariant name="_ipE5oa86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="inv4" org.eventb.core.predicate="cabinGoingToDown ∈ cabins ⤔ floor"/>
+    <org.eventb.core.invariant name="_ipE5oq86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="inv5" org.eventb.core.predicate="∀ c · c ∈ cabins ⇒ c ∈ dom(cabinFloor) ∨ c ∈ dom(cabinGoingToUp) ∨ c ∈ dom(cabinGoingToDown)"/>
+    <org.eventb.core.event name="_ipFgsK86Eey_3erQTu7NnQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="_ipFgsa86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabins ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="_ipGHwK86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinFloor ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="_ipGu0K86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinGoingToUp ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="_ipGu0a86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinGoingToDown ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="_NyKJ0q6lEeyyTqIqcafSag" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="AddCabin">
-        <org.eventb.core.parameter name="_NyKJ066lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
-        <org.eventb.core.guard name="_NyKJ1K6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ CABINS"/>
-        <org.eventb.core.guard name="_NyKw4K6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="c ∉ cabins"/>
-        <org.eventb.core.guard name="_NyKw4a6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = 1)"/>
-        <org.eventb.core.guard name="_NyKw4q6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = 1)"/>
-        <org.eventb.core.action name="_NyLX8K6lEeyyTqIqcafSag" org.eventb.core.assignment="cabins ≔ cabins ∪ {c}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="_NyLX8a6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinFloor(c) ≔ 1" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+    <org.eventb.core.event name="_ipHV4K86Eey_3erQTu7NnQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="AddCabin">
+        <org.eventb.core.parameter name="_ipHV4a86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="_ipH88K86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ CABINS"/>
+        <org.eventb.core.guard name="_ipH88a86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="c ∉ cabins"/>
+        <org.eventb.core.guard name="_ipH88q86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = 1)"/>
+        <org.eventb.core.guard name="_ipIkAK86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = 1)"/>
+        <org.eventb.core.action name="_ipIkAa86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabins ≔ cabins ∪ {c}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="_ipJLEK86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinFloor(c) ≔ 1" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="_NyLX8q6lEeyyTqIqcafSag" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="RemoveCabin">
-        <org.eventb.core.parameter name="_NyLX866lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
-        <org.eventb.core.guard name="_NyLX9K6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ cabins"/>
-        <org.eventb.core.guard name="_NyL_AK6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="cabinFloor(c) = topFloor"/>
-        <org.eventb.core.action name="_NyL_Aa6lEeyyTqIqcafSag" org.eventb.core.assignment="cabins ≔ cabins ∖ {c}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="_NyL_Aq6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinFloor ≔ {c} ⩤ cabinFloor" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
-        <org.eventb.core.action name="_NyL_A66lEeyyTqIqcafSag" org.eventb.core.assignment="cabinGoingToUp ≔ {c} ⩤ cabinGoingToUp" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
-        <org.eventb.core.action name="_NyL_BK6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinGoingToDown ≔ {c} ⩤ cabinGoingToUp" org.eventb.core.generated="false" org.eventb.core.label="act4"/>
+    <org.eventb.core.event name="_ipJLEa86Eey_3erQTu7NnQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="RemoveCabin">
+        <org.eventb.core.parameter name="_ipJLEq86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="_ipJLE686Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ cabins"/>
+        <org.eventb.core.guard name="_ipJyIK86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="c ∈ dom(cabinFloor)"/>
+        <org.eventb.core.guard name="_ipJyIa86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="cabinFloor(c) = topFloor"/>
+        <org.eventb.core.action name="_ipKZMK86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabins ≔ cabins ∖ {c}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="_ipKZMa86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinFloor ≔ {c} ⩤ cabinFloor" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="_ipKZMq86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinGoingToUp ≔ {c} ⩤ cabinGoingToUp" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="_ipKZM686Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinGoingToDown ≔ {c} ⩤ cabinGoingToUp" org.eventb.core.generated="false" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="_NyMmEK6lEeyyTqIqcafSag" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CabinLeavesFloorGoingUp">
-        <org.eventb.core.parameter name="_NyMmEa6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
-        <org.eventb.core.guard name="_NyMmEq6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ cabins"/>
-        <org.eventb.core.guard name="_NyMmE66lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = (cabinFloor(c) + 1))"/>
-        <org.eventb.core.guard name="_NyNNIK6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = (cabinFloor(c) + 1))"/>
-        <org.eventb.core.guard name="_NyNNIa6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinGoingToUp(cab) = (cabinFloor(c) + 1))"/>
-        <org.eventb.core.guard name="_NyNNIq6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="cabinFloor(c) ≠ topFloor"/>
-        <org.eventb.core.guard name="_NyNNI66lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="c ∉ dom(cabinGoingToDown)"/>
-        <org.eventb.core.action name="_NyN0MK6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinGoingToUp(c) ≔ cabinFloor(c) + 1" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="_NyN0Ma6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinFloor ≔ {c} ⩤ cabinFloor" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+    <org.eventb.core.event name="_ipLAQK86Eey_3erQTu7NnQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CabinLeavesFloorGoingUp">
+        <org.eventb.core.parameter name="_ipLAQa86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="_ipLAQq86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ cabins"/>
+        <org.eventb.core.guard name="_ipLnUK86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = (cabinFloor(c) + 1))"/>
+        <org.eventb.core.guard name="_ipLnUa86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = (cabinFloor(c) + 1))"/>
+        <org.eventb.core.guard name="_ipLnUq86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinGoingToUp(cab) = (cabinFloor(c) + 1))"/>
+        <org.eventb.core.guard name="_ipMOYK86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="cabinFloor(c) ≠ topFloor"/>
+        <org.eventb.core.guard name="_ipMOYa86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="c ∉ dom(cabinGoingToDown)"/>
+        <org.eventb.core.action name="_ipMOYq86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinGoingToUp(c) ≔ cabinFloor(c) + 1" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="_ipMOY686Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinFloor ≔ {c} ⩤ cabinFloor" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="_NyN0Mq6lEeyyTqIqcafSag" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CabinReachesFloorGoingUp">
-        <org.eventb.core.parameter name="_NyN0M66lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
-        <org.eventb.core.guard name="_NyN0NK6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ cabins"/>
-        <org.eventb.core.guard name="_NyObQK6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="c ∈ dom(cabinGoingToUp)"/>
-        <org.eventb.core.action name="_NyObQa6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinFloor(c) ≔ cabinGoingToUp(c)" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="_NyObQq6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinGoingToUp ≔ {c} ⩤ cabinGoingToUp" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+    <org.eventb.core.event name="_ipM1cK86Eey_3erQTu7NnQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CabinReachesFloorGoingUp">
+        <org.eventb.core.parameter name="_ipM1ca86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="_ipM1cq86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ cabins"/>
+        <org.eventb.core.guard name="_ipM1c686Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="c ∈ dom(cabinGoingToUp)"/>
+        <org.eventb.core.action name="_ipNcgK86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinFloor(c) ≔ cabinGoingToUp(c)" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="_ipNcga86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinGoingToUp ≔ {c} ⩤ cabinGoingToUp" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="_NyObQ66lEeyyTqIqcafSag" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CabinLeavesFloorGoingDown">
-        <org.eventb.core.parameter name="_NyPCUK6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
-        <org.eventb.core.guard name="_NyPCUa6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ cabins"/>
-        <org.eventb.core.guard name="_NyPCUq6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = (cabinFloor(c) − 1))"/>
-        <org.eventb.core.guard name="_NyPCU66lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinGoingToUp(cab) = (cabinFloor(c) − 1))"/>
-        <org.eventb.core.guard name="_NyPpYK6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = (cabinFloor(c) − 1))"/>
-        <org.eventb.core.guard name="_NyPpYa6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="cabinFloor(c) ≠ 1"/>
-        <org.eventb.core.guard name="_NyPpYq6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="c ∉ dom(cabinGoingToUp)"/>
-        <org.eventb.core.action name="_NyPpY66lEeyyTqIqcafSag" org.eventb.core.assignment="cabinGoingToDown(c) ≔ cabinFloor(c) − 1" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="_NyQQcK6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinFloor ≔ {c} ⩤ cabinFloor" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+    <org.eventb.core.event name="_ipNcgq86Eey_3erQTu7NnQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CabinLeavesFloorGoingDown">
+        <org.eventb.core.parameter name="_ipNcg686Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="_ipNchK86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ cabins"/>
+        <org.eventb.core.guard name="_ipODkK86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = (cabinFloor(c) − 1))"/>
+        <org.eventb.core.guard name="_ipODka86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinGoingToUp(cab) = (cabinFloor(c) − 1))"/>
+        <org.eventb.core.guard name="_ipODkq86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = (cabinFloor(c) − 1))"/>
+        <org.eventb.core.guard name="_ipODk686Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="cabinFloor(c) ≠ 1"/>
+        <org.eventb.core.guard name="_ipOqoK86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="c ∉ dom(cabinGoingToUp)"/>
+        <org.eventb.core.action name="_ipOqoa86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinGoingToDown(c) ≔ cabinFloor(c) − 1" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="_ipOqoq86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinFloor ≔ {c} ⩤ cabinFloor" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="_NyQQca6lEeyyTqIqcafSag" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CabinReachesFloorGoingDown">
-        <org.eventb.core.parameter name="_NyQQcq6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
-        <org.eventb.core.guard name="_NyQQc66lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ cabins"/>
-        <org.eventb.core.guard name="_NyQQdK6lEeyyTqIqcafSag" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="c ∈ dom(cabinGoingToDown)"/>
-        <org.eventb.core.action name="_NyQ3gK6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinFloor(c) ≔ cabinGoingToDown(c)" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name="_NyQ3ga6lEeyyTqIqcafSag" org.eventb.core.assignment="cabinGoingToDown ≔ {c} ⩤ cabinGoingToDown" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+    <org.eventb.core.event name="_ipOqo686Eey_3erQTu7NnQ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="CabinReachesFloorGoingDown">
+        <org.eventb.core.parameter name="_ipPRsK86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.identifier="c"/>
+        <org.eventb.core.guard name="_ipPRsa86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="c ∈ cabins"/>
+        <org.eventb.core.guard name="_ipPRsq86Eey_3erQTu7NnQ" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="c ∈ dom(cabinGoingToDown)"/>
+        <org.eventb.core.action name="_ipPRs686Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinFloor(c) ≔ cabinGoingToDown(c)" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="_ipP4wK86Eey_3erQTu7NnQ" org.eventb.core.assignment="cabinGoingToDown ≔ {c} ⩤ cabinGoingToDown" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
 </org.eventb.core.machineFile>
