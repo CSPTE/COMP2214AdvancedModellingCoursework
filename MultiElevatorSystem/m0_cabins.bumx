@@ -7,7 +7,7 @@ invariants
 @inv2: cabinFloor ∈ cabins ⤔ floor
 @inv3: cabinGoingToUp ∈ cabins ⤔ floor
 @inv4: cabinGoingToDown ∈ cabins ⤔ floor
-@inv5: ∀ c · c ∈ cabins ⇒ c ∈ dom(cabinFloor) ∨ c ∈ dom(cabinGoingToUp) ∨ c ∈ dom(cabinGoingToDown)
+@inv5: ∀ c · c ∈ cabins ⇒ (c ∈ dom(cabinFloor) ∨ c ∈ dom(cabinGoingToUp) ∨ c ∈ dom(cabinGoingToDown))
 
 events
 event INITIALISATION
@@ -47,7 +47,7 @@ any c where
 @grd2: ¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = (cabinFloor(c) + 1))
 @grd3: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = (cabinFloor(c) + 1))
 @grd4: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToUp(cab) = (cabinFloor(c) + 1))
-@grd5: cabinFloor(c) ≠ topFloor 
+@grd5: cabinFloor(c) < topFloor 
 @grd6: c ∉ dom(cabinGoingToDown)
 then
 @act1: cabinGoingToUp(c) ≔ cabinFloor(c) + 1
@@ -69,7 +69,7 @@ any c where
 @grd2: ¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = (cabinFloor(c) − 1))
 @grd3: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToUp(cab) = (cabinFloor(c) − 1))
 @grd4: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = (cabinFloor(c) − 1))
-@grd5: cabinFloor(c) ≠ 1
+@grd5: cabinFloor(c) > 1
 @grd6: c ∉ dom(cabinGoingToUp)
 then
 @act1: cabinGoingToDown(c) ≔ cabinFloor(c) − 1
