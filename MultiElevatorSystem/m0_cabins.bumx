@@ -22,8 +22,10 @@ event AddCabin
 any c where
 @grd1: c ∈ CABINS
 @grd2: c ∉ cabins
-@grd3: ¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = 1)
-@grd4: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = 1)
+//@grd3: ¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = 1)
+//@grd4: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = 1)
+@grd3: dom(cabinFloor ▷ {1}) = ∅
+@grd4: dom(cabinGoingToDown ▷ {1}) = ∅
 then
 @act1: cabins ≔ cabins ∪ {c}
 @act2: cabinFloor(c) ≔ 1
@@ -32,23 +34,27 @@ end
 event RemoveCabin
 any c where
 @grd1: c ∈ cabins
-@grd2: c ∈ dom(cabinFloor)
-@grd3: cabinFloor(c) = topFloor
+@grd2: c ∉ dom(cabinGoingToUp)
+@grd3: c ∉ dom(cabinGoingToDown)
+@grd4: c ∈ dom(cabinFloor)
+@grd5: cabinFloor(c) = topFloor
 then
 @act1: cabins ≔ cabins ∖ {c}
 @act2: cabinFloor ≔ {c} ⩤ cabinFloor
-@act3: cabinGoingToUp ≔ {c} ⩤ cabinGoingToUp
-@act4: cabinGoingToDown ≔ {c} ⩤ cabinGoingToUp
 end
 
 event CabinLeavesFloorGoingUp
 any c where
 @grd1: c ∈ cabins
-@grd2: ¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = (cabinFloor(c) + 1))
-@grd3: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = (cabinFloor(c) + 1))
-@grd4: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToUp(cab) = (cabinFloor(c) + 1))
-@grd5: cabinFloor(c) < topFloor 
-@grd6: c ∉ dom(cabinGoingToDown)
+@grd2: c ∈ dom(cabinFloor)
+//@grd2: ¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = (cabinFloor(c) + 1))
+//@grd3: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = (cabinFloor(c) + 1))
+//@grd4: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToUp(cab) = (cabinFloor(c) + 1))
+@grd3: dom(cabinFloor ▷ {cabinFloor(c) + 1}) = ∅
+@grd4: dom(cabinGoingToDown ▷ {cabinFloor(c) + 1}) = ∅
+@grd5: dom(cabinGoingToUp ▷ {cabinFloor(c) + 1}) = ∅
+@grd6: cabinFloor(c) < topFloor 
+@grd7: c ∉ dom(cabinGoingToDown)
 then
 @act1: cabinGoingToUp(c) ≔ cabinFloor(c) + 1
 @act2: cabinFloor ≔ {c} ⩤ cabinFloor
@@ -58,6 +64,7 @@ event CabinReachesFloorGoingUp
 any c where
 @grd1: c ∈ cabins
 @grd2: c ∈ dom(cabinGoingToUp)
+@grd3: dom(cabinFloor ▷ {cabinGoingToUp(c)}) = ∅
 then
 @act1: cabinFloor(c) ≔ cabinGoingToUp(c)
 @act2: cabinGoingToUp ≔ {c} ⩤ cabinGoingToUp
@@ -66,11 +73,15 @@ end
 event CabinLeavesFloorGoingDown
 any c where
 @grd1: c ∈ cabins
-@grd2: ¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = (cabinFloor(c) − 1))
-@grd3: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToUp(cab) = (cabinFloor(c) − 1))
-@grd4: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = (cabinFloor(c) − 1))
-@grd5: cabinFloor(c) > 1
-@grd6: c ∉ dom(cabinGoingToUp)
+@grd2: c ∈ dom(cabinFloor)
+//@grd2: ¬(∃ cab · cab ∈ cabins ∧ cabinFloor(cab) = (cabinFloor(c) − 1))
+//@grd3: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToUp(cab) = (cabinFloor(c) − 1))
+//@grd4: ¬(∃ cab · cab ∈ cabins ∧ cabinGoingToDown(cab) = (cabinFloor(c) − 1))
+@grd3: dom(cabinFloor ▷ {cabinFloor(c) − 1}) = ∅
+@grd4: dom(cabinGoingToDown ▷ {cabinFloor(c) − 1}) = ∅
+@grd5: dom(cabinGoingToUp ▷ {cabinFloor(c) − 1}) = ∅
+@grd6: cabinFloor(c) > 1
+@grd7: c ∉ dom(cabinGoingToUp)
 then
 @act1: cabinGoingToDown(c) ≔ cabinFloor(c) − 1
 @act2: cabinFloor ≔ {c} ⩤ cabinFloor
@@ -80,6 +91,7 @@ event CabinReachesFloorGoingDown
 any c where
 @grd1: c ∈ cabins
 @grd2: c ∈ dom(cabinGoingToDown)
+@grd3: dom(cabinFloor ▷ {cabinGoingToDown(c)}) = ∅
 then
 @act1: cabinFloor(c) ≔ cabinGoingToDown(c)
 @act2: cabinGoingToDown ≔ {c} ⩤ cabinGoingToDown

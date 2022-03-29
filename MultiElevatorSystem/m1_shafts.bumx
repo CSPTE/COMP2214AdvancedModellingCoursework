@@ -8,7 +8,10 @@ variables
 	cabinGoingToDown
 	cabinInShaft
 invariants
-@inv6:cabinInShaft ∈ cabins → SHAFTS
+@inv2: cabinFloor ∈ cabins ⇸ floor
+@inv3: cabinGoingToUp ∈ cabins ⇸ floor
+@inv4: cabinGoingToDown ∈ cabins ⇸ floor
+@inv6: cabinInShaft ∈ cabins → shafts
 @inv7: ∀ c · c ∈ cabins ⇒ (c ∈ dom(cabinInShaft))
 events
 	event INITIALISATION extends INITIALISATION
@@ -16,28 +19,61 @@ events
 	@act5: cabinInShaft ≔ ∅
 	end
 
-	event AddCabin extends AddCabin
-	begin
-	@act3: cabinInShaft(c) ≔ shaft1
+	event AddCabin refines AddCabin
+	any c where
+	@grd1: c ∈ CABINS
+	@grd2: c ∉ cabins
+	@grd3: ¬(∃ cab · (cab ∈ cabins) ∧ (cabinFloor(cab) = 1) ∧ (cabinInShaft(cab) = 1))
+	@grd4: ¬(∃ cab · (cab ∈ cabins) ∧ (cabinGoingToDown(cab) = 1) ∧ (cabinInShaft(cab) = 1))
+	//@grd3: (dom(cabinFloor ▷ {1}) = ∅) ∧ (dom(cabinInShaft ▷ {1}) = ∅)
+	//@grd4: dom(cabinGoingToDown ▷ {1}) = ∅
+	then
+	@act1: cabins ≔ cabins ∪ {c}
+	@act2: cabinFloor(c) ≔ 1
+	@act3: cabinInShaft(c) ≔ 1
 	end
 
 	event RemoveCabin extends RemoveCabin
-	when
-	@grd4: cabinInShaft(c) = shaft1
+	where
+	@grd6: cabinInShaft(c) = 1
 	then
-	@act5: cabinInShaft ≔ {c} ⩤ cabinInShaft
+	@act3: cabinInShaft ≔ {c} ⩤ cabinInShaft
 	end
 
 	event CabinLeavesFloorGoingUp extends CabinLeavesFloorGoingUp
+	where
+	@grd8: cabinInShaft(c) = 1
 	end
 
 	event CabinReachesFloorGoingUp extends CabinReachesFloorGoingUp
 	end
 
 	event CabinLeavesFloorGoingDown extends CabinLeavesFloorGoingDown
+	where
+	@grd8: cabinInShaft(c) = 2
 	end
 
 	event CabinReachesFloorGoingDown extends CabinReachesFloorGoingDown
+	end
+	
+	event CabinUpToDown
+	any c where
+	@grd1: c ∈ cabins
+	@grd2: c ∈ dom(cabinFloor)
+	@grd3: cabinFloor(c) = topFloor
+	@grd4: cabinInShaft(c) = 1
+	then
+	@act1: cabinInShaft(c) ≔ 2
+	end
+	
+	event CabinDownToUp
+	any c where
+	@grd1: c ∈ cabins
+	@grd2: c ∈ dom(cabinFloor)
+	@grd3: cabinFloor(c) = 1
+	@grd4: cabinInShaft(c) = 2
+	then
+	@act1: cabinInShaft(c) ≔ 1
 	end
 
 end

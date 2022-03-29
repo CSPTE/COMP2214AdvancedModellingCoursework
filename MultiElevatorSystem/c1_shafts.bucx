@@ -3,9 +3,7 @@ extends c0_cabins
 sets
 SHAFTS
 constants
-shaft1
-shaft2
+shafts
 axioms
-@axm3: shaft1 ∈ SHAFTS
-@axm4: shaft2 ∈ SHAFTS
+@axm3: shafts = 1 ‥ 2 
 end
