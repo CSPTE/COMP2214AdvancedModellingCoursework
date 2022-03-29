@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="3">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="3">
+        <org.eventb.core.poIdentifier name="CABINS" org.eventb.core.type="ℙ(CABINS)"/>
+        <org.eventb.core.poIdentifier name="floor" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="topFloor" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poPredicate name="topFloos" org.eventb.core.predicate="topFloor=4" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.axiom#_PpeNkq6hEeyyTqIqcafSag"/>
+        <org.eventb.core.poPredicate name="topFloot" org.eventb.core.predicate="floor=1 ‥ topFloor" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.axiom#_PpeNk66hEeyyTqIqcafSag"/>
+        <org.eventb.core.poIdentifier name="SHAFTS" org.eventb.core.type="ℙ(SHAFTS)"/>
+        <org.eventb.core.poIdentifier name="shaft1" org.eventb.core.type="SHAFTS"/>
+        <org.eventb.core.poIdentifier name="shaft2" org.eventb.core.type="SHAFTS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MultiElevatorSystem/c1_shafts.bpo|org.eventb.core.poFile#c1_shafts|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="shaft1∈SHAFTS" org.eventb.core.source="/MultiElevatorSystem/c1_shafts.buc|org.eventb.core.contextFile#c1_shafts|org.eventb.core.axiom#_4B5r0K9PEeyhAtJ_mdtZoA"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="shaft2∈SHAFTS" org.eventb.core.source="/MultiElevatorSystem/c1_shafts.buc|org.eventb.core.contextFile#c1_shafts|org.eventb.core.axiom#_4B5r0a9PEeyhAtJ_mdtZoA"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

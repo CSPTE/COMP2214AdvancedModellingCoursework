@@ -1,0 +1,43 @@
+machine m1_shafts
+refines m0_cabins
+sees c1_shafts
+variables
+	cabins
+	cabinFloor
+	cabinGoingToUp
+	cabinGoingToDown
+	cabinInShaft
+invariants
+@inv6:cabinInShaft ∈ cabins → SHAFTS
+@inv7: ∀ c · c ∈ cabins ⇒ (c ∈ dom(cabinInShaft))
+events
+	event INITIALISATION extends INITIALISATION
+	begin
+	@act5: cabinInShaft ≔ ∅
+	end
+
+	event AddCabin extends AddCabin
+	begin
+	@act3: cabinInShaft(c) ≔ shaft1
+	end
+
+	event RemoveCabin extends RemoveCabin
+	when
+	@grd4: cabinInShaft(c) = shaft1
+	then
+	@act5: cabinInShaft ≔ {c} ⩤ cabinInShaft
+	end
+
+	event CabinLeavesFloorGoingUp extends CabinLeavesFloorGoingUp
+	end
+
+	event CabinReachesFloorGoingUp extends CabinReachesFloorGoingUp
+	end
+
+	event CabinLeavesFloorGoingDown extends CabinLeavesFloorGoingDown
+	end
+
+	event CabinReachesFloorGoingDown extends CabinReachesFloorGoingDown
+	end
+
+end
