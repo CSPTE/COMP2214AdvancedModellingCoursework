@@ -55,7 +55,7 @@ events
 	@grd2: c ∈ dom(cabinFloor)
 	@grd3: cabinFloor(c) = topFloor
 	@grd4: cabinInShaft(c) = 1
-	@grd5: ¬(∃ cab · cab ∈ cabins ∧ dom(cabinFloor ▷ {topFloor}) = {cab} ∧ cabinInShaft(cab) = 2)
+	@grd5: ¬(∃ cab · cab ∈ cabins ∧ cab ∈ dom(cabinFloor ▷ {topFloor}) ∧ cabinInShaft(cab) = 2)
 	then
 	@act1: cabinInShaft(c) ≔ 2
 	end
@@ -66,7 +66,7 @@ events
 	@grd2: c ∈ dom(cabinFloor)
 	@grd3: cabinFloor(c) = 1
 	@grd4: cabinInShaft(c) = 2
-	@grd5: ¬(∃ cab · cab ∈ cabins ∧ dom(cabinFloor ▷ {1}) = {cab} ∧ cabinInShaft(cab) = 1)
+	@grd5: ¬(∃ cab · cab ∈ cabins ∧ cab ∈ dom(cabinFloor ▷ {1}) ∧ cabinInShaft(cab) = 1)
 	then
 	@act1: cabinInShaft(c) ≔ 1
 	end
