@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
-    <org.eventb.core.extendsContext name="_eqexkLQmEeydyJ8QXNaVYQ" org.eventb.core.target="c0_cabins"/>
-    <org.eventb.core.carrierSet name="_eqfYoLQmEeydyJ8QXNaVYQ" org.eventb.core.generated="false" org.eventb.core.identifier="SHAFTS"/>
-    <org.eventb.core.constant name="_eqfYobQmEeydyJ8QXNaVYQ" org.eventb.core.generated="false" org.eventb.core.identifier="shafts"/>
-    <org.eventb.core.axiom name="_eqfYorQmEeydyJ8QXNaVYQ" org.eventb.core.generated="false" org.eventb.core.label="axm3" org.eventb.core.predicate="shafts = 1 ‥ 2"/>
+    <org.eventb.core.extendsContext name="_YDPs4LTsEeyJ0fKm5T7Atw" org.eventb.core.target="c0_cabins"/>
+    <org.eventb.core.carrierSet name="_YDPs4bTsEeyJ0fKm5T7Atw" org.eventb.core.generated="false" org.eventb.core.identifier="SHAFTS"/>
+    <org.eventb.core.constant name="_YDPs4rTsEeyJ0fKm5T7Atw" org.eventb.core.generated="false" org.eventb.core.identifier="shafts"/>
+    <org.eventb.core.axiom name="_YDPs47TsEeyJ0fKm5T7Atw" org.eventb.core.generated="false" org.eventb.core.label="axm3" org.eventb.core.predicate="shafts = 1 ‥ 2"/>
 </org.eventb.core.contextFile>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
-    <org.eventb.core.carrierSet name="_eqZ5ELQmEeydyJ8QXNaVYQ" org.eventb.core.generated="false" org.eventb.core.identifier="CABINS"/>
-    <org.eventb.core.constant name="_eqagILQmEeydyJ8QXNaVYQ" org.eventb.core.generated="false" org.eventb.core.identifier="topFloor"/>
-    <org.eventb.core.constant name="_eqbHMLQmEeydyJ8QXNaVYQ" org.eventb.core.generated="false" org.eventb.core.identifier="floor"/>
-    <org.eventb.core.axiom name="_eqbHMbQmEeydyJ8QXNaVYQ" org.eventb.core.generated="false" org.eventb.core.label="axm1" org.eventb.core.predicate="topFloor = 4"/>
-    <org.eventb.core.axiom name="_eqbuQLQmEeydyJ8QXNaVYQ" org.eventb.core.generated="false" org.eventb.core.label="axm2" org.eventb.core.predicate="floor = 1 ‥ topFloor"/>
+    <org.eventb.core.carrierSet name="_YDF78bTsEeyJ0fKm5T7Atw" org.eventb.core.generated="false" org.eventb.core.identifier="CABINS"/>
+    <org.eventb.core.constant name="_YDF78rTsEeyJ0fKm5T7Atw" org.eventb.core.generated="false" org.eventb.core.identifier="topFloor"/>
+    <org.eventb.core.constant name="_YDF787TsEeyJ0fKm5T7Atw" org.eventb.core.generated="false" org.eventb.core.identifier="floor"/>
+    <org.eventb.core.axiom name="_YDF79LTsEeyJ0fKm5T7Atw" org.eventb.core.generated="false" org.eventb.core.label="axm1" org.eventb.core.predicate="topFloor = 4"/>
+    <org.eventb.core.axiom name="_YDF79bTsEeyJ0fKm5T7Atw" org.eventb.core.generated="false" org.eventb.core.label="axm2" org.eventb.core.predicate="floor = 1 ‥ topFloor"/>
 </org.eventb.core.contextFile>

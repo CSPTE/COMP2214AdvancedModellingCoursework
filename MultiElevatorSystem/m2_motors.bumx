@@ -1,0 +1,49 @@
+machine m2_motors
+refines m1_shafts
+sees c2_motors
+variables
+	cabins
+	cabinFloor
+	cabinGoingToUp
+	cabinGoingToDown
+	cabinInShaft
+	motorState
+invariants
+@inv7: motorState ∈ MOTORS → STATES
+events
+	event INITIALISATION extends INITIALISATION
+	begin
+	@act6: ∀ m · m ∈ MOTORS ⇒ motorState(m) ≔ OFF, 
+	end
+
+	event AddCabin extends AddCabin
+	end
+
+	event RemoveCabin extends RemoveCabin
+	end
+
+	event CabinLeavesFloorGoingUp extends CabinLeavesFloorGoingUp
+	end
+
+	event CabinReachesFloorGoingUp extends CabinReachesFloorGoingUp
+	end
+
+	event CabinLeavesFloorGoingDown extends CabinLeavesFloorGoingDown
+	end
+
+	event CabinReachesFloorGoingDown extends CabinReachesFloorGoingDown
+	end
+
+	event CabinUpToDown extends CabinUpToDown
+	end
+
+	event CabinDownToUp extends CabinDownToUp
+	end
+	
+	event MotorStarts
+	any c where
+	@grd1: c ∈ cabins
+	@grd2: c ∈ dom(cabinFloor)
+	end
+
+end

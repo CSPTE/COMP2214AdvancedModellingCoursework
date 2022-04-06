@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base">
+    <org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/MultiElevatorSystem/c1_shafts.bcc|org.eventb.core.scContextFile#c1_shafts" org.eventb.core.source="/MultiElevatorSystem/c2_motors.buc|org.eventb.core.contextFile#c2_motors|org.eventb.core.extendsContext#_3QymoLTvEeyJ0fKm5T7Atw"/>
+    <org.eventb.core.scInternalContext name="c0_cabins">
+        <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="topFloor=4" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.axiom#_YDF79LTsEeyJ0fKm5T7Atw" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="floor=1 ‥ topFloor" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.axiom#_YDF79bTsEeyJ0fKm5T7Atw" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scConstant name="floor" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.constant#_YDF787TsEeyJ0fKm5T7Atw" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.scConstant name="topFloor" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.constant#_YDF78rTsEeyJ0fKm5T7Atw" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.scCarrierSet name="CABINS" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.carrierSet#_YDF78bTsEeyJ0fKm5T7Atw" org.eventb.core.type="ℙ(CABINS)"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scInternalContext name="c1_shafts">
+        <org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/MultiElevatorSystem/c0_cabins.bcc|org.eventb.core.scContextFile#c0_cabins" org.eventb.core.source="/MultiElevatorSystem/c1_shafts.buc|org.eventb.core.contextFile#c1_shafts|org.eventb.core.extendsContext#_YDPs4LTsEeyJ0fKm5T7Atw"/>
+        <org.eventb.core.scAxiom name="c0_cabint" org.eventb.core.label="axm3" org.eventb.core.predicate="shafts=1 ‥ 2" org.eventb.core.source="/MultiElevatorSystem/c1_shafts.buc|org.eventb.core.contextFile#c1_shafts|org.eventb.core.axiom#_YDPs47TsEeyJ0fKm5T7Atw" org.eventb.core.theorem="false"/>
+        <org.eventb.core.scConstant name="shafts" org.eventb.core.source="/MultiElevatorSystem/c1_shafts.buc|org.eventb.core.contextFile#c1_shafts|org.eventb.core.constant#_YDPs4rTsEeyJ0fKm5T7Atw" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.scCarrierSet name="SHAFTS" org.eventb.core.source="/MultiElevatorSystem/c1_shafts.buc|org.eventb.core.contextFile#c1_shafts|org.eventb.core.carrierSet#_YDPs4bTsEeyJ0fKm5T7Atw" org.eventb.core.type="ℙ(SHAFTS)"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scAxiom name="c1_shaftt" org.eventb.core.label="axm4" org.eventb.core.predicate="partition(STATES,{OFF},{ON})" org.eventb.core.source="/MultiElevatorSystem/c2_motors.buc|org.eventb.core.contextFile#c2_motors|org.eventb.core.axiom#_3QzNsLTvEeyJ0fKm5T7Atw" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="c1_shaftu" org.eventb.core.label="axm5" org.eventb.core.predicate="cabinMotor∈CABINS ⤖ MOTORS" org.eventb.core.source="/MultiElevatorSystem/c2_motors.buc|org.eventb.core.contextFile#c2_motors|org.eventb.core.axiom#_3QzNsbTvEeyJ0fKm5T7Atw" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scCarrierSet name="STATES" org.eventb.core.source="/MultiElevatorSystem/c2_motors.buc|org.eventb.core.contextFile#c2_motors|org.eventb.core.carrierSet#_3QymorTvEeyJ0fKm5T7Atw" org.eventb.core.type="ℙ(STATES)"/>
+    <org.eventb.core.scConstant name="OFF" org.eventb.core.source="/MultiElevatorSystem/c2_motors.buc|org.eventb.core.contextFile#c2_motors|org.eventb.core.constant#_3QympLTvEeyJ0fKm5T7Atw" org.eventb.core.type="STATES"/>
+    <org.eventb.core.scConstant name="ON" org.eventb.core.source="/MultiElevatorSystem/c2_motors.buc|org.eventb.core.contextFile#c2_motors|org.eventb.core.constant#_3Qymo7TvEeyJ0fKm5T7Atw" org.eventb.core.type="STATES"/>
+    <org.eventb.core.scConstant name="cabinMotor" org.eventb.core.source="/MultiElevatorSystem/c2_motors.buc|org.eventb.core.contextFile#c2_motors|org.eventb.core.constant#_3QympbTvEeyJ0fKm5T7Atw" org.eventb.core.type="ℙ(CABINS×MOTORS)"/>
+    <org.eventb.core.scCarrierSet name="MOTORS" org.eventb.core.source="/MultiElevatorSystem/c2_motors.buc|org.eventb.core.contextFile#c2_motors|org.eventb.core.carrierSet#_3QymobTvEeyJ0fKm5T7Atw" org.eventb.core.type="ℙ(MOTORS)"/>
+</org.eventb.core.scContextFile>
