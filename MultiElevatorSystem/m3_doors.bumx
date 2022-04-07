@@ -9,7 +9,7 @@ variables
 	cabinInShaft
 	motorState
 	doorState
-	invariants
+invariants
 @inv8: doorState ∈ DOORS ⇸ DOORSTATES // "→" needed after fix
 events
 	event INITIALISATION extends INITIALISATION

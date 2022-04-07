@@ -1,0 +1,10 @@
+context c4_buttons
+extends c3_doors
+sets
+BUTTONS
+constants
+UP
+DOWN
+axioms
+@axm8: partition(BUTTONS,{UP},{DOWN})
+end

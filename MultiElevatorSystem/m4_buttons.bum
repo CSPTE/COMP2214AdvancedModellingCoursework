@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xmachine.base" org.eventb.core.generated="false" version="5">
+    <org.eventb.core.refinesMachine name="_OaIyYLZREeysHqCi4Xrxkg" org.eventb.core.target="m3_doors"/>
+    <org.eventb.core.seesContext name="_OaIyYbZREeysHqCi4Xrxkg" org.eventb.core.target="c4_buttons"/>
+    <org.eventb.core.variable name="_OaIyYrZREeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.identifier="cabins"/>
+    <org.eventb.core.variable name="_OaIyY7ZREeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.identifier="cabinFloor"/>
+    <org.eventb.core.variable name="_OaIyZLZREeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.identifier="cabinGoingToUp"/>
+    <org.eventb.core.variable name="_OaJZcLZREeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.identifier="cabinGoingToDown"/>
+    <org.eventb.core.variable name="_OaJZcbZREeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.identifier="cabinInShaft"/>
+    <org.eventb.core.variable name="_OaJZcrZREeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.identifier="motorState"/>
+    <org.eventb.core.variable name="_OaJZc7ZREeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.identifier="doorState"/>
+    <org.eventb.core.variable name="_OaJZdLZREeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.identifier="floorButtons"/>
+    <org.eventb.core.invariant name="_OaJZdbZREeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.label="inv9" org.eventb.core.predicate="floorButtons ∈ floor ↔ BUTTONS"/>
+    <org.eventb.core.event name="_OaKAgLZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="_OaKAgbZREeysHqCi4Xrxkg" org.eventb.core.assignment="floorButtons ≔ ∅" org.eventb.core.generated="false" org.eventb.core.label="act8"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaKnkLZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="AddCabin">
+        <org.eventb.core.refinesEvent name="_OaKnkbZREeysHqCi4Xrxkg" org.eventb.core.target="AddCabin"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaKnkrZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="RemoveCabin">
+        <org.eventb.core.refinesEvent name="_OaKnk7ZREeysHqCi4Xrxkg" org.eventb.core.target="RemoveCabin"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaKnlLZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="CabinLeavesFloorGoingUp">
+        <org.eventb.core.refinesEvent name="_OaLOoLZREeysHqCi4Xrxkg" org.eventb.core.target="CabinLeavesFloorGoingUp"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaLOobZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="CabinReachesFloorGoingUp">
+        <org.eventb.core.refinesEvent name="_OaLOorZREeysHqCi4Xrxkg" org.eventb.core.target="CabinReachesFloorGoingUp"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaLOo7ZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="CabinLeavesFloorGoingDown">
+        <org.eventb.core.refinesEvent name="_OaLOpLZREeysHqCi4Xrxkg" org.eventb.core.target="CabinLeavesFloorGoingDown"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaL1sLZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="CabinReachesFloorGoingDown">
+        <org.eventb.core.refinesEvent name="_OaL1sbZREeysHqCi4Xrxkg" org.eventb.core.target="CabinReachesFloorGoingDown"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaL1srZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="CabinUpToDown">
+        <org.eventb.core.refinesEvent name="_OaMcwLZREeysHqCi4Xrxkg" org.eventb.core.target="CabinUpToDown"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaMcwbZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="CabinDownToUp">
+        <org.eventb.core.refinesEvent name="_OaMcwrZREeysHqCi4Xrxkg" org.eventb.core.target="CabinDownToUp"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaMcw7ZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="MotorStarts">
+        <org.eventb.core.refinesEvent name="_OaMcxLZREeysHqCi4Xrxkg" org.eventb.core.target="MotorStarts"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaND0LZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="MotorStops">
+        <org.eventb.core.refinesEvent name="_OaND0bZREeysHqCi4Xrxkg" org.eventb.core.target="MotorStops"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaND0rZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="DoorClosedToHalf">
+        <org.eventb.core.refinesEvent name="_OaND07ZREeysHqCi4Xrxkg" org.eventb.core.target="DoorClosedToHalf"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaND1LZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="DoorHalfToOpen">
+        <org.eventb.core.refinesEvent name="_OaNq4LZREeysHqCi4Xrxkg" org.eventb.core.target="DoorHalfToOpen"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaNq4bZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="DoorOpenToHalf">
+        <org.eventb.core.refinesEvent name="_OaNq4rZREeysHqCi4Xrxkg" org.eventb.core.target="DoorOpenToHalf"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_OaNq47ZREeysHqCi4Xrxkg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="DoorHalfToClosed">
+        <org.eventb.core.refinesEvent name="_OaNq5LZREeysHqCi4Xrxkg" org.eventb.core.target="DoorHalfToClosed"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>
