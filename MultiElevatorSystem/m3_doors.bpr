@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="CABINS,DOORS,DOORSTATES,MOTORS,MOTORSTATES">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(MOTORSTATES,{OFF},{ON}))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8,p9"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p8,p9"/>
+                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DOORSTATES,{OPEN},{HALF},{CLOSED}))" org.eventb.core.prHyps="">
+                    <org.eventb.core.prAnte name="'">
+                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10,p11,p12,p13"/>
+                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p10,p11,p12,p13"/>
+                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p6,p1,p2,p4,p8,p9,p10,p11,p12,p13">
+                            <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="CLOSED" org.eventb.core.type="DOORSTATES"/>
+        <org.eventb.core.prIdent name="HALF" org.eventb.core.type="DOORSTATES"/>
+        <org.eventb.core.prIdent name="OFF" org.eventb.core.type="MOTORSTATES"/>
+        <org.eventb.core.prIdent name="ON" org.eventb.core.type="MOTORSTATES"/>
+        <org.eventb.core.prIdent name="OPEN" org.eventb.core.type="DOORSTATES"/>
+        <org.eventb.core.prIdent name="cabinDoor" org.eventb.core.type="ℙ(CABINS×DOORS)"/>
+        <org.eventb.core.prIdent name="cabinMotor" org.eventb.core.type="ℙ(CABINS×MOTORS)"/>
+        <org.eventb.core.prIdent name="floor" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.prIdent name="shafts" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.prIdent name="topFloor" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="MOTORSTATES={OFF,ON}"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="cabinMotor∈CABINS ⤖ MOTORS"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="cabinDoor∈CABINS ⤖ DOORS"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(DOORSTATES,{OPEN},{HALF},{CLOSED})"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(DOORS×DOORSTATES))∈DOORS ⇸ DOORSTATES"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="floor=1 ‥ topFloor"/>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬HALF=CLOSED"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="partition(MOTORSTATES,{OFF},{ON})"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬OPEN=HALF"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="shafts=1 ‥ 2"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="topFloor=4"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬OFF=ON"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="DOORSTATES={OPEN,HALF,CLOSED}"/>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬OPEN=CLOSED"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>

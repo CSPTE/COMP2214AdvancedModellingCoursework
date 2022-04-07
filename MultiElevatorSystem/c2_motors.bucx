@@ -2,12 +2,12 @@ context c2_motors
 extends c1_shafts
 sets
 MOTORS
-STATES
+MOTORSTATES
 constants
 ON
 OFF
 cabinMotor
 axioms
-@axm4: partition(STATES,{OFF},{ON})
+@axm4: partition(MOTORSTATES,{OFF},{ON})
 @axm5: cabinMotor ∈ CABINS ⤖ MOTORS
 end

@@ -9,41 +9,74 @@ variables
 	cabinInShaft
 	motorState
 invariants
-@inv7: motorState ∈ MOTORS → STATES
+@inv7: motorState ∈ MOTORS ⇸ MOTORSTATES // "→" needed after fix
 events
 	event INITIALISATION extends INITIALISATION
 	begin
-	@act6: ∀ m · m ∈ MOTORS ⇒ motorState(m) ≔ OFF, 
+	@act6: motorState ≔ ∅ 
 	end
 
 	event AddCabin extends AddCabin
+	begin
+	@act4: motorState(cabinMotor(c)) ≔ OFF
 	end
 
 	event RemoveCabin extends RemoveCabin
+	where
+	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
+	@grd7: motorState(cabinMotor(c)) = ON
+	then
+	@act4: motorState(cabinMotor(c)) ≔ OFF
 	end
 
 	event CabinLeavesFloorGoingUp extends CabinLeavesFloorGoingUp
+	where
+	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
+	@grd8: motorState(cabinMotor(c)) = ON
 	end
 
 	event CabinReachesFloorGoingUp extends CabinReachesFloorGoingUp
 	end
 
 	event CabinLeavesFloorGoingDown extends CabinLeavesFloorGoingDown
+	where
+	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
+	@grd8: motorState(cabinMotor(c)) = ON
 	end
 
 	event CabinReachesFloorGoingDown extends CabinReachesFloorGoingDown
 	end
 
 	event CabinUpToDown extends CabinUpToDown
+	where
+	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
+	@grd7: motorState(cabinMotor(c)) = ON
 	end
 
 	event CabinDownToUp extends CabinDownToUp
+	where
+	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
+	@grd7: motorState(cabinMotor(c)) = ON
 	end
 	
 	event MotorStarts
 	any c where
 	@grd1: c ∈ cabins
 	@grd2: c ∈ dom(cabinFloor)
+	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
+	@grd3: motorState(cabinMotor(c)) = OFF
+	then
+	@act1: motorState(cabinMotor(c)) ≔ ON
+	end
+	
+	event MotorStops
+	any c where
+	@grd1: c ∈ cabins
+	@grd2: c ∈ dom(cabinFloor)
+	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
+	@grd3: motorState(cabinMotor(c)) = ON
+	then
+	@act1: motorState(cabinMotor(c)) ≔ OFF
 	end
 
 end
