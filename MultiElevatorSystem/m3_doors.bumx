@@ -18,33 +18,101 @@ events
 	end
 
 	event AddCabin extends AddCabin
+	begin
+	@act5: doorState(cabinDoor(c)) ≔ CLOSED
 	end
 
 	event RemoveCabin extends RemoveCabin
+	where
+	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
+	@grd8: doorState(cabinDoor(c)) = CLOSED
 	end
 
 	event CabinLeavesFloorGoingUp extends CabinLeavesFloorGoingUp
+	where
+	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
+	@grd9: doorState(cabinDoor(c)) = CLOSED
 	end
 
 	event CabinReachesFloorGoingUp extends CabinReachesFloorGoingUp
 	end
 
 	event CabinLeavesFloorGoingDown extends CabinLeavesFloorGoingDown
+	where
+	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
+	@grd9: doorState(cabinDoor(c)) = CLOSED
 	end
 
 	event CabinReachesFloorGoingDown extends CabinReachesFloorGoingDown
 	end
 
 	event CabinUpToDown extends CabinUpToDown
+	where
+	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
+	@grd8: doorState(cabinDoor(c)) = CLOSED
 	end
 
 	event CabinDownToUp extends CabinDownToUp
+	where
+	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
+	@grd8: doorState(cabinDoor(c)) = CLOSED
 	end
 
 	event MotorStarts extends MotorStarts
+	where
+	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
+	@grd4: doorState(cabinDoor(c)) = CLOSED
 	end
 
 	event MotorStops extends MotorStops
+	end
+	
+	event DoorClosedToHalf
+	any c where
+	@grd1: c ∈ cabins
+	@grd2: c ∈ dom(cabinFloor)
+	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
+	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
+	@grd3: motorState(cabinMotor(c)) = OFF
+	@grd4: doorState(cabinDoor(c)) = CLOSED
+	then
+	@act1: doorState(cabinDoor(c)) ≔ HALF 
+	end
+	
+	event DoorHalfToOpen
+	any c where
+	@grd1: c ∈ cabins
+	@grd2: c ∈ dom(cabinFloor)
+	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
+	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
+	@grd3: motorState(cabinMotor(c)) = OFF
+	@grd4: doorState(cabinDoor(c)) = HALF
+	then
+	@act1: doorState(cabinDoor(c)) ≔ OPEN 
+	end
+	
+	event DoorOpenToHalf
+	any c where
+	@grd1: c ∈ cabins
+	@grd2: c ∈ dom(cabinFloor)
+	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
+	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
+	@grd3: motorState(cabinMotor(c)) = OFF
+	@grd4: doorState(cabinDoor(c)) = OPEN 
+	then
+	@act1: doorState(cabinDoor(c)) ≔ HALF 
+	end
+	
+	event DoorHalfToClosed
+	any c where
+	@grd1: c ∈ cabins
+	@grd2: c ∈ dom(cabinFloor)
+	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
+	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
+	@grd3: motorState(cabinMotor(c)) = OFF
+	@grd4: doorState(cabinDoor(c)) = HALF 
+	then
+	@act1: doorState(cabinDoor(c)) ≔ CLOSED 
 	end
 
 end
