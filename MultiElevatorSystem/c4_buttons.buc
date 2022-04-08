@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
-    <org.eventb.core.extendsContext name="_oSJHoLZQEeysHqCi4Xrxkg" org.eventb.core.target="c3_doors"/>
-    <org.eventb.core.carrierSet name="_oSJHobZQEeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.identifier="BUTTONS"/>
-    <org.eventb.core.constant name="_oSJHorZQEeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.identifier="UP"/>
-    <org.eventb.core.constant name="_oSJHo7ZQEeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.identifier="DOWN"/>
-    <org.eventb.core.axiom name="_oSJHpLZQEeysHqCi4Xrxkg" org.eventb.core.generated="false" org.eventb.core.label="axm8" org.eventb.core.predicate="partition(BUTTONS,{UP},{DOWN})"/>
+    <org.eventb.core.extendsContext name="_jlFn8LcnEey5aZhi9V9WKQ" org.eventb.core.target="c3_doors"/>
+    <org.eventb.core.carrierSet name="_jlGPALcnEey5aZhi9V9WKQ" org.eventb.core.generated="false" org.eventb.core.identifier="UPBUTTONS"/>
+    <org.eventb.core.carrierSet name="_jlGPAbcnEey5aZhi9V9WKQ" org.eventb.core.generated="false" org.eventb.core.identifier="DOWNBUTTONS"/>
+    <org.eventb.core.constant name="_jlGPArcnEey5aZhi9V9WKQ" org.eventb.core.generated="false" org.eventb.core.identifier="floorUpButtons"/>
+    <org.eventb.core.constant name="_jlG2ELcnEey5aZhi9V9WKQ" org.eventb.core.generated="false" org.eventb.core.identifier="floorDownButtons"/>
+    <org.eventb.core.axiom name="_jlG2EbcnEey5aZhi9V9WKQ" org.eventb.core.generated="false" org.eventb.core.label="axm8" org.eventb.core.predicate="floorUpButtons ∈ (floor ∖ {topFloor}) ⤖ UPBUTTONS"/>
+    <org.eventb.core.axiom name="_jlG2ErcnEey5aZhi9V9WKQ" org.eventb.core.generated="false" org.eventb.core.label="axm9" org.eventb.core.predicate="floorDownButtons ∈ (floor ∖ {1}) ⤖ DOWNBUTTONS"/>
 </org.eventb.core.contextFile>

@@ -1,10 +1,16 @@
 context c4_buttons
 extends c3_doors
 sets
-BUTTONS
+UPBUTTONS
+DOWNBUTTONS
 constants
-UP
-DOWN
+floorUpButtons
+floorDownButtons
+//cabinButtons
+//buttonSet
 axioms
-@axm8: partition(BUTTONS,{UP},{DOWN})
+@axm8: floorUpButtons ∈ (floor ∖ {topFloor}) ⤖ UPBUTTONS
+@axm9: floorDownButtons ∈ (floor ∖ {1}) ⤖ DOWNBUTTONS
+//@axm10: cabinButtons = 1 ‥ topFloor 
+//@axm11: buttonSet ∈ CABINS ⤖ cabinButtons
 end

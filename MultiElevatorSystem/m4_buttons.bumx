@@ -9,13 +9,16 @@ variables
 	cabinInShaft
 	motorState
 	doorState
-	floorButtons
+	activeFloorUpButtons
+	activeFloorDownButtons
 invariants
-@inv9: floorButtons ∈ floor ↔ BUTTONS
+@inv9: activeFloorUpButtons ∈ floor ⇸ UPBUTTONS
+@inv10: activeFloorDownButtons ∈ floor ⇸ DOWNBUTTONS
 events
 	event INITIALISATION extends INITIALISATION
 	begin
-	@act8: floorButtons ≔ ∅ 
+	@act8: activeFloorUpButtons ≔ ∅ 
+	@act9: activeFloorDownButtons ≔ ∅ 
 	end
 
 	event AddCabin extends AddCabin
@@ -25,12 +28,16 @@ events
 	end
 
 	event CabinLeavesFloorGoingUp extends CabinLeavesFloorGoingUp
+	where
+	@grd10: cabinFloor(c) ∉ dom (activeFloorUpButtons)
 	end
 
 	event CabinReachesFloorGoingUp extends CabinReachesFloorGoingUp
 	end
 
 	event CabinLeavesFloorGoingDown extends CabinLeavesFloorGoingDown
+	where
+	@grd10: cabinFloor(c) ∉ dom (activeFloorDownButtons)
 	end
 
 	event CabinReachesFloorGoingDown extends CabinReachesFloorGoingDown
@@ -52,12 +59,31 @@ events
 	end
 
 	event DoorHalfToOpen extends DoorHalfToOpen
+	begin
+	@act2: activeFloorDownButtons ≔ {cabinFloor(c)} ⩤ activeFloorDownButtons //⇔ cabinInShaft(c) = 2
+	@act3: activeFloorUpButtons ≔ {cabinFloor(c)} ⩤ activeFloorUpButtons //⇔ cabinInShaft(c) = 1
 	end
 
 	event DoorOpenToHalf extends DoorOpenToHalf
 	end
 
 	event DoorHalfToClosed extends DoorHalfToClosed
+	end
+	
+	event UserPressesUpButton
+	any f where
+	@grd1: f ∈ floor
+	@grd2: f ∈ dom(floorUpButtons)
+	then
+	@act1: activeFloorUpButtons(f) ≔ floorUpButtons(f)
+	end
+	
+	event UserPressesDownButton
+	any f where
+	@grd1: f ∈ floor
+	@grd2: f ∈ dom(floorDownButtons)
+	then
+	@act1: activeFloorDownButtons(f) ≔ floorDownButtons(f)
 	end
 
 end

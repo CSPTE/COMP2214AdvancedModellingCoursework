@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base">
-    <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="topFloor=4" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.axiom#_YDF79LTsEeyJ0fKm5T7Atw" org.eventb.core.theorem="false"/>
-    <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="floor=1 ‥ topFloor" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.axiom#_YDF79bTsEeyJ0fKm5T7Atw" org.eventb.core.theorem="false"/>
-    <org.eventb.core.scConstant name="floor" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.constant#_YDF787TsEeyJ0fKm5T7Atw" org.eventb.core.type="ℙ(ℤ)"/>
-    <org.eventb.core.scConstant name="topFloor" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.constant#_YDF78rTsEeyJ0fKm5T7Atw" org.eventb.core.type="ℤ"/>
-    <org.eventb.core.scCarrierSet name="CABINS" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.carrierSet#_YDF78bTsEeyJ0fKm5T7Atw" org.eventb.core.type="ℙ(CABINS)"/>
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="topFloor=4" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.axiom#_DWI0MLcnEey5aZhi9V9WKQ" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="floor=1 ‥ topFloor" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.axiom#_DWI0MbcnEey5aZhi9V9WKQ" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant name="floor" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.constant#_DWINIbcnEey5aZhi9V9WKQ" org.eventb.core.type="ℙ(ℤ)"/>
+    <org.eventb.core.scConstant name="topFloor" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.constant#_DWINILcnEey5aZhi9V9WKQ" org.eventb.core.type="ℤ"/>
+    <org.eventb.core.scCarrierSet name="CABINS" org.eventb.core.source="/MultiElevatorSystem/c0_cabins.buc|org.eventb.core.contextFile#c0_cabins|org.eventb.core.carrierSet#_DWHmELcnEey5aZhi9V9WKQ" org.eventb.core.type="ℙ(CABINS)"/>
 </org.eventb.core.scContextFile>
