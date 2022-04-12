@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="11">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poFile org.eventb.core.poStamp="118">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="117">
         <org.eventb.core.poIdentifier name="CABINS" org.eventb.core.type="ℙ(CABINS)"/>
         <org.eventb.core.poIdentifier name="floor" org.eventb.core.type="ℙ(ℤ)"/>
         <org.eventb.core.poIdentifier name="topFloor" org.eventb.core.type="ℤ"/>
@@ -27,10 +27,20 @@
         <org.eventb.core.poIdentifier name="DOWNBUTTONS" org.eventb.core.type="ℙ(DOWNBUTTONS)"/>
         <org.eventb.core.poIdentifier name="UPBUTTONS" org.eventb.core.type="ℙ(UPBUTTONS)"/>
         <org.eventb.core.poIdentifier name="floorDownButtons" org.eventb.core.type="ℙ(ℤ×DOWNBUTTONS)"/>
+        <org.eventb.core.poIdentifier name="cabinButtons" org.eventb.core.type="ℙ(CABINS×ℙ(ℤ))"/>
         <org.eventb.core.poIdentifier name="floorUpButtons" org.eventb.core.type="ℙ(ℤ×UPBUTTONS)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MultiElevatorSystem/c4_buttons.bpo|org.eventb.core.poFile#c4_buttons|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="11">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="floorUpButtons∈floor ∖ {topFloor} ⤖ UPBUTTONS" org.eventb.core.source="/MultiElevatorSystem/c4_buttons.buc|org.eventb.core.contextFile#c4_buttons|org.eventb.core.axiom#_jlG2EbcnEey5aZhi9V9WKQ"/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floorDownButtons∈floor ∖ {1} ⤖ DOWNBUTTONS" org.eventb.core.source="/MultiElevatorSystem/c4_buttons.buc|org.eventb.core.contextFile#c4_buttons|org.eventb.core.axiom#_jlG2ErcnEey5aZhi9V9WKQ"/>
+    <org.eventb.core.poSequent name="axm10/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="118">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/MultiElevatorSystem/c4_buttons.bpo|org.eventb.core.poFile#c4_buttons|org.eventb.core.poPredicateSet#HYPc2_motoru"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀c⦂CABINS,f⦂ℤ·c∈CABINS∧f∈floor⇒c∈dom(cabinButtons)∧cabinButtons∈CABINS ⇸ ℙ(ℤ)" org.eventb.core.source="/MultiElevatorSystem/c4_buttons.buc|org.eventb.core.contextFile#c4_buttons|org.eventb.core.axiom#_o0FZI7pYEey5A5d07hP7Pw"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/MultiElevatorSystem/c4_buttons.buc|org.eventb.core.contextFile#c4_buttons|org.eventb.core.axiom#_o0FZI7pYEey5A5d07hP7Pw"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/MultiElevatorSystem/c4_buttons.bpo|org.eventb.core.poFile#c4_buttons|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/MultiElevatorSystem/c4_buttons.bpo|org.eventb.core.poFile#c4_buttons|org.eventb.core.poPredicateSet#HYPc2_motoru"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="HYPc2_motoru" org.eventb.core.parentSet="/MultiElevatorSystem/c4_buttons.bpo|org.eventb.core.poFile#c4_buttons|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="118">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="floorUpButtons∈floor ∖ {topFloor} ⤖ UPBUTTONS" org.eventb.core.source="/MultiElevatorSystem/c4_buttons.buc|org.eventb.core.contextFile#c4_buttons|org.eventb.core.axiom#_o0FZIbpYEey5A5d07hP7Pw"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="floorDownButtons∈floor ∖ {1} ⤖ DOWNBUTTONS" org.eventb.core.source="/MultiElevatorSystem/c4_buttons.buc|org.eventb.core.contextFile#c4_buttons|org.eventb.core.axiom#_o0FZIrpYEey5A5d07hP7Pw"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/MultiElevatorSystem/c4_buttons.bpo|org.eventb.core.poFile#c4_buttons|org.eventb.core.poPredicateSet#HYPc2_motoru" org.eventb.core.poStamp="118">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀c⦂CABINS,f⦂ℤ·c∈CABINS∧f∈floor⇒cabinButtons(c)=floor" org.eventb.core.source="/MultiElevatorSystem/c4_buttons.buc|org.eventb.core.contextFile#c4_buttons|org.eventb.core.axiom#_o0FZI7pYEey5A5d07hP7Pw"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

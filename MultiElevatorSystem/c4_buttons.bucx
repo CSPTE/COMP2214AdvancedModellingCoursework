@@ -6,11 +6,9 @@ DOWNBUTTONS
 constants
 floorUpButtons
 floorDownButtons
-//cabinButtons
-//buttonSet
+cabinButtons
 axioms
 @axm8: floorUpButtons ∈ (floor ∖ {topFloor}) ⤖ UPBUTTONS
 @axm9: floorDownButtons ∈ (floor ∖ {1}) ⤖ DOWNBUTTONS
-//@axm10: cabinButtons = 1 ‥ topFloor 
-//@axm11: buttonSet ∈ CABINS ⤖ cabinButtons
+@axm10: ∀ c,f · c ∈ CABINS ∧ f ∈ floor ⇒ cabinButtons(c) = floor
 end
