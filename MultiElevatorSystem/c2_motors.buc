@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
-    <org.eventb.core.extendsContext name="_zpv20LcFEeysQY1M-O70eQ" org.eventb.core.target="c1_shafts"/>
-    <org.eventb.core.carrierSet name="_zpv20bcFEeysQY1M-O70eQ" org.eventb.core.generated="false" org.eventb.core.identifier="MOTORS"/>
-    <org.eventb.core.carrierSet name="_zpwd4LcFEeysQY1M-O70eQ" org.eventb.core.generated="false" org.eventb.core.identifier="MOTORSTATES"/>
-    <org.eventb.core.constant name="_zpwd4bcFEeysQY1M-O70eQ" org.eventb.core.generated="false" org.eventb.core.identifier="ON"/>
-    <org.eventb.core.constant name="_zpwd4rcFEeysQY1M-O70eQ" org.eventb.core.generated="false" org.eventb.core.identifier="OFF"/>
-    <org.eventb.core.constant name="_zpxE8LcFEeysQY1M-O70eQ" org.eventb.core.generated="false" org.eventb.core.identifier="cabinMotor"/>
-    <org.eventb.core.axiom name="_zpxE8bcFEeysQY1M-O70eQ" org.eventb.core.generated="false" org.eventb.core.label="axm4" org.eventb.core.predicate="partition(MOTORSTATES,{OFF},{ON})"/>
-    <org.eventb.core.axiom name="_zpxsALcFEeysQY1M-O70eQ" org.eventb.core.generated="false" org.eventb.core.label="axm5" org.eventb.core.predicate="cabinMotor ∈ CABINS ⤖ MOTORS"/>
+    <org.eventb.core.extendsContext name="_NxtyQLy5Eeymy6jsux9dmg" org.eventb.core.target="c1_shafts"/>
+    <org.eventb.core.carrierSet name="_NxuZULy5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.identifier="MOTORS"/>
+    <org.eventb.core.carrierSet name="_NxuZUby5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.identifier="MOTORSTATES"/>
+    <org.eventb.core.constant name="_NxvAYLy5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.identifier="ON"/>
+    <org.eventb.core.constant name="_NxvAYby5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.identifier="OFF"/>
+    <org.eventb.core.constant name="_NxvncLy5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.identifier="cabinMotor"/>
+    <org.eventb.core.axiom name="_Nxvncby5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.label="axm4" org.eventb.core.predicate="partition(MOTORSTATES,{OFF},{ON})"/>
+    <org.eventb.core.axiom name="_NxwOgLy5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.label="axm5" org.eventb.core.predicate="cabinMotor ∈ CABINS ⤖ MOTORS"/>
 </org.eventb.core.contextFile>

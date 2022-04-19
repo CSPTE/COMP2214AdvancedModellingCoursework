@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
+    <org.eventb.core.extendsContext name="_C6CBkLy6Eeymy6jsux9dmg" org.eventb.core.target="c4_buttons"/>
+    <org.eventb.core.axiom name="_C6CBkby6Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.label="axm8" org.eventb.core.predicate="floorUpButtons ∈ (1 ‥ (topFloor − 1)) → UPBUTTONS"/>
+    <org.eventb.core.axiom name="_C6CBkry6Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.label="axm9" org.eventb.core.predicate="floorDownButtons ∈ (2 ‥ topFloor) → DOWNBUTTONS"/>
+</org.eventb.core.contextFile>

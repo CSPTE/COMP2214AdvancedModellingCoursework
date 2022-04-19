@@ -1,0 +1,70 @@
+machine m5_impl
+refines m4_buttons
+sees c5_impl
+variables
+	cabins
+	cabinFloor
+	cabinGoingToUp
+	cabinGoingToDown
+	cabinInShaft
+	motorState
+	doorState
+	activeFloorUpButtons
+	activeFloorDownButtons
+	activateCabinButtons
+events
+	event INITIALISATION extends INITIALISATION
+	end
+
+	event AddCabin extends AddCabin
+	end
+
+	event RemoveCabin extends RemoveCabin
+	end
+
+	event CabinLeavesFloorGoingUp extends CabinLeavesFloorGoingUp
+	end
+
+	event CabinReachesFloorGoingUp extends CabinReachesFloorGoingUp
+	end
+
+	event CabinLeavesFloorGoingDown extends CabinLeavesFloorGoingDown
+	end
+
+	event CabinReachesFloorGoingDown extends CabinReachesFloorGoingDown
+	end
+
+	event CabinUpToDown extends CabinUpToDown
+	end
+
+	event CabinDownToUp extends CabinDownToUp
+	end
+
+	event MotorStarts extends MotorStarts
+	end
+
+	event MotorStops extends MotorStops
+	end
+
+	event DoorClosedToHalf extends DoorClosedToHalf
+	end
+
+	event DoorHalfToOpen extends DoorHalfToOpen
+	end
+
+	event DoorOpenToHalf extends DoorOpenToHalf
+	end
+
+	event DoorHalfToClosed extends DoorHalfToClosed
+	end
+
+	event UserPressesUpButton extends UserPressesUpButton
+	end
+
+	event UserPressesDownButton extends UserPressesDownButton
+	end
+
+	event UserPressesFloorButton extends UserPressesFloorButton
+	end
+
+end

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;ac.soton.xeventb.xcontext.base" org.eventb.core.generated="false" version="3">
-    <org.eventb.core.extendsContext name="_o0EyELpYEey5A5d07hP7Pw" org.eventb.core.target="c3_doors"/>
-    <org.eventb.core.carrierSet name="_o0EyEbpYEey5A5d07hP7Pw" org.eventb.core.generated="false" org.eventb.core.identifier="UPBUTTONS"/>
-    <org.eventb.core.carrierSet name="_o0EyErpYEey5A5d07hP7Pw" org.eventb.core.generated="false" org.eventb.core.identifier="DOWNBUTTONS"/>
-    <org.eventb.core.constant name="_o0EyE7pYEey5A5d07hP7Pw" org.eventb.core.generated="false" org.eventb.core.identifier="floorUpButtons"/>
-    <org.eventb.core.constant name="_o0EyFLpYEey5A5d07hP7Pw" org.eventb.core.generated="false" org.eventb.core.identifier="floorDownButtons"/>
-    <org.eventb.core.constant name="_o0FZILpYEey5A5d07hP7Pw" org.eventb.core.generated="false" org.eventb.core.identifier="cabinButtons"/>
-    <org.eventb.core.axiom name="_o0FZIbpYEey5A5d07hP7Pw" org.eventb.core.generated="false" org.eventb.core.label="axm8" org.eventb.core.predicate="floorUpButtons ∈ (floor ∖ {topFloor}) ⤖ UPBUTTONS"/>
-    <org.eventb.core.axiom name="_o0FZIrpYEey5A5d07hP7Pw" org.eventb.core.generated="false" org.eventb.core.label="axm9" org.eventb.core.predicate="floorDownButtons ∈ (floor ∖ {1}) ⤖ DOWNBUTTONS"/>
-    <org.eventb.core.axiom name="_o0FZI7pYEey5A5d07hP7Pw" org.eventb.core.generated="false" org.eventb.core.label="axm10" org.eventb.core.predicate="∀ c,f · c ∈ CABINS ∧ f ∈ floor ⇒ cabinButtons(c) = floor"/>
+    <org.eventb.core.extendsContext name="_NxRtYLy5Eeymy6jsux9dmg" org.eventb.core.target="c3_doors"/>
+    <org.eventb.core.carrierSet name="_NxRtYby5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.identifier="UPBUTTONS"/>
+    <org.eventb.core.carrierSet name="_NxRtYry5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.identifier="DOWNBUTTONS"/>
+    <org.eventb.core.constant name="_NxSUcLy5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.identifier="floorUpButtons"/>
+    <org.eventb.core.constant name="_NxSUcby5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.identifier="floorDownButtons"/>
+    <org.eventb.core.constant name="_NxS7gLy5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.identifier="cabinButtons"/>
+    <org.eventb.core.axiom name="_NxS7gby5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.label="axm8" org.eventb.core.predicate="floorUpButtons ∈ (floor ∖ {topFloor}) ⤖ UPBUTTONS"/>
+    <org.eventb.core.axiom name="_NxTikLy5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.label="axm9" org.eventb.core.predicate="floorDownButtons ∈ (floor ∖ {1}) ⤖ DOWNBUTTONS"/>
+    <org.eventb.core.axiom name="_NxTikby5Eeymy6jsux9dmg" org.eventb.core.generated="false" org.eventb.core.label="axm10" org.eventb.core.predicate="∀ c,f · c ∈ CABINS ∧ f ∈ floor ⇒ cabinButtons(c) = floor"/>
 </org.eventb.core.contextFile>

@@ -1,0 +1,6 @@
+context c5_impl
+extends c4_buttons
+axioms
+@axm8: floorUpButtons ∈ (1 ‥ (topFloor − 1)) → UPBUTTONS
+@axm9: floorDownButtons ∈ (2 ‥ topFloor) → DOWNBUTTONS
+end
