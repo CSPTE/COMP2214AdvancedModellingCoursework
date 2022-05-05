@@ -13,6 +13,9 @@ variables
 	activeFloorDownButtons
 	activateCabinButtons
 invariants
+//store these as arrays in machine 5
+//array(number) -> bool a: 0..m -> BOOL
+//cabin -> array
 @inv9: activeFloorUpButtons ∈ floor ⇸ UPBUTTONS
 @inv10: activeFloorDownButtons ∈ floor ⇸ DOWNBUTTONS
 @inv11: activateCabinButtons ∈ cabins ↔ floor
@@ -69,11 +72,20 @@ events
 	event DoorClosedToHalf extends DoorClosedToHalf
 	end
 
-	event DoorHalfToOpen extends DoorHalfToOpen
+	event DoorHalfToOpenShaft1 extends DoorHalfToOpen
+	where
+	@grd5: cabinInShaft(c) = 1
 	begin
-	@act2: activeFloorDownButtons ≔ {cabinFloor(c)} ⩤ activeFloorDownButtons //⇔ cabinInShaft(c) = 2
-	@act3: activeFloorUpButtons ≔ {cabinFloor(c)} ⩤ activeFloorUpButtons //⇔ cabinInShaft(c) = 1
-	@act4: activateCabinButtons ≔ activateCabinButtons ⩥ {cabinFloor(c)}
+	@act2: activeFloorUpButtons ≔ {cabinFloor(c)} ⩤ activeFloorUpButtons
+	@act3: activateCabinButtons ≔ activateCabinButtons ⩥ {cabinFloor(c)}
+	end
+	
+	event DoorHalfToOpenShaft2 extends DoorHalfToOpen
+	where
+	@grd5: cabinInShaft(c) = 2
+	begin
+	@act2: activeFloorDownButtons ≔ {cabinFloor(c)} ⩤ activeFloorDownButtons
+	@act3: activateCabinButtons ≔ activateCabinButtons ⩥ {cabinFloor(c)}
 	end
 
 	event DoorOpenToHalf extends DoorOpenToHalf
@@ -103,8 +115,7 @@ events
 	@grd1: c ∈ cabins
 	@grd2: f ∈ floor
 	then
-	//@act1: activateCabinButtons ≔ activateCabinButtons ∪ {c ↔ f}
-	@act1: activateCabinButtons(c) ≔ f
+	@act1: activateCabinButtons ≔ activateCabinButtons ∪ {c ↦ f}
 	end
 
 end

@@ -10,7 +10,8 @@ variables
 	motorState
 	doorState
 invariants
-@inv8: doorState ∈ DOORS ⇸ DOORSTATES // "→" needed after fix
+@inv8: doorState ∈ DOORS ⇸ DOORSTATES
+@inv13: ∀ c · c ∈ cabins ⇒ cabinDoor(c) ∈ dom(doorState) 
 events
 	event INITIALISATION extends INITIALISATION
 	begin
@@ -24,13 +25,11 @@ events
 
 	event RemoveCabin extends RemoveCabin
 	where
-	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
 	@grd8: doorState(cabinDoor(c)) = CLOSED
 	end
 
 	event CabinLeavesFloorGoingUp extends CabinLeavesFloorGoingUp
 	where
-	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
 	@grd9: doorState(cabinDoor(c)) = CLOSED
 	end
 
@@ -39,7 +38,6 @@ events
 
 	event CabinLeavesFloorGoingDown extends CabinLeavesFloorGoingDown
 	where
-	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
 	@grd9: doorState(cabinDoor(c)) = CLOSED
 	end
 
@@ -48,19 +46,16 @@ events
 
 	event CabinUpToDown extends CabinUpToDown
 	where
-	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
 	@grd8: doorState(cabinDoor(c)) = CLOSED
 	end
 
 	event CabinDownToUp extends CabinDownToUp
 	where
-	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
 	@grd8: doorState(cabinDoor(c)) = CLOSED
 	end
 
 	event MotorStarts extends MotorStarts
 	where
-	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
 	@grd4: doorState(cabinDoor(c)) = CLOSED
 	end
 
@@ -71,8 +66,6 @@ events
 	any c where
 	@grd1: c ∈ cabins
 	@grd2: c ∈ dom(cabinFloor)
-	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
-	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
 	@grd3: motorState(cabinMotor(c)) = OFF
 	@grd4: doorState(cabinDoor(c)) = CLOSED
 	then
@@ -83,8 +76,6 @@ events
 	any c where
 	@grd1: c ∈ cabins
 	@grd2: c ∈ dom(cabinFloor)
-	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
-	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
 	@grd3: motorState(cabinMotor(c)) = OFF
 	@grd4: doorState(cabinDoor(c)) = HALF
 	then
@@ -95,8 +86,6 @@ events
 	any c where
 	@grd1: c ∈ cabins
 	@grd2: c ∈ dom(cabinFloor)
-	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
-	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
 	@grd3: motorState(cabinMotor(c)) = OFF
 	@grd4: doorState(cabinDoor(c)) = OPEN 
 	then
@@ -107,8 +96,6 @@ events
 	any c where
 	@grd1: c ∈ cabins
 	@grd2: c ∈ dom(cabinFloor)
-	@grd99: cabinMotor(c) ∈ dom(motorState) //Will be removed with fix
-	@grd98: cabinDoor(c) ∈ dom(doorState) //Will be removed with fix
 	@grd3: motorState(cabinMotor(c)) = OFF
 	@grd4: doorState(cabinDoor(c)) = HALF 
 	then
