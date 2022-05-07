@@ -69,10 +69,10 @@
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="cabinFloor∈cabins ⇸ floor"/>
         <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬c∈cabins"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬(∃cab⦂CABINS·cab∈cabins∧dom(cabinFloor ▷ {1})={cab}∧cabinInShaft(cab)=1)"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="RemoveCabin/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17" org.eventb.core.prSets="CABINS">
         <org.eventb.core.lang name="L"/>
@@ -120,9 +120,9 @@
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="cabinFloor∈cabins ⇸ floor"/>
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="c∉dom(cabinGoingToUp)"/>
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬c∈dom(cabinGoingToDown)"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="CABINS">
         <org.eventb.core.lang name="L"/>
@@ -413,12 +413,12 @@
         <org.eventb.core.prPred name="p15" org.eventb.core.predicate="topFloor=4"/>
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="cabinInShaft∈cabins → shafts"/>
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="cabinFloor∈cabins ⇸ floor"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
         <org.eventb.core.prReas name="r5" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="CabinUpToDown/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="c0" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="CABINS">
         <org.eventb.core.lang name="L"/>
@@ -729,11 +729,11 @@
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="cabinFloor∈cabins ⇸ floor"/>
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬(∃cab⦂CABINS·cab∈cabins∧cab∈dom(cabinFloor ▷ {1})∧cabinInShaft(cab)=1)"/>
         <org.eventb.core.prPred name="p20" org.eventb.core.predicate="∀cab⦂CABINS·¬(cab∈cabins∧cab∈dom(cabinFloor ▷ {1})∧cabinInShaft(cab)=1)"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.rn"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="CabinDownToUp/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="c0" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16" org.eventb.core.prSets="CABINS">
         <org.eventb.core.lang name="L"/>
