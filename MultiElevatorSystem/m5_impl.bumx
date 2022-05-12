@@ -16,6 +16,8 @@ invariants
 	@inv9: activeFloorUpButtonsArray ∈ ℙ(floor ∖ {topFloor})
 	@inv10: activeFloorDownButtonsArray ∈ ℙ(floor ∖ {1})
 	@inv11: activateCabinButtonsArray ∈ cabins → ℙ(floor)
+	//@inv12: activeFloorUpButtonsArray ∈ ℙ(dom(activeFloorUpButtons) ∖ {topFloor})
+	//@inv13: activeFloorDownButtonsArray ∈ ℙ(dom(activeFloorDownButtons) ∖ {1})
 events
 	event INITIALISATION
 	then
